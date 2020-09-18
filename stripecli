@@ -1,0 +1,29 @@
+stripe products create \
+  --name="Free" \
+  --description="Upto 100 orders per day" 
+
+
+stripe products create \
+  --name="Pro" \
+  --description="Upto 10,000 orders per day" 
+
+
+stripe products create \
+  --name="Elite" \
+  --description="Upto 100k orders per day"
+
+
+
+stripe prices create \
+  --unit-amount=75 \
+  --currency=usd \
+  -d "recurring[interval]"=month \
+  --product=prod_I2Vr8qgdA1dZ2d
+
+
+usage_records
+----------------
+
+  stripe usage_records create si_I2XY02at9DX02H \
+  --quantity=100 \
+  --timestamp=1571252444
